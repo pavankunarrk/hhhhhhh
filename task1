@@ -1,0 +1,12 @@
+ dat<-read.csv("https://raw.githubusercontent.com/Adipersonalworks/Random/master/student_scores%20-%20student_scores.csv")
+ print("dat")
+ dat
+ x<-dat$Hours
+y<-dat$Scores
+plot(x~y)
+abline(lm(x~y))
+relation<-lm(y~x)
+summary(relation)
+a<-data.frame(x=9.25)
+result<-predict(relation,a)
+result
